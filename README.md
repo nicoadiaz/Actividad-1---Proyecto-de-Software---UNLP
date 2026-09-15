@@ -8,7 +8,7 @@ Las dos versiones se encuentran divididas en las siguientes carpetas:
 
 Ambas implementaciones comparten los recursos gráficos, los cuales están centralizados en la carpeta `imagenes/`.
 
-## 🚀 Instrucciones para ejecutar el proyecto
+##  Instrucciones para ejecutar el proyecto
 
 Dado que se trata de sitios web estáticos creados puramente con HTML y CSS (sin frameworks pesados ni bases de datos), existen varias formas muy sencillas de levantarlos en tu entorno local.
 
