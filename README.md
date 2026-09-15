@@ -47,20 +47,4 @@ Si tienes Python instalado, puedes levantar un servidor web local. Es una excele
 4. Abre tu navegador y dirígete a: [http://localhost:8000](http://localhost:8000)
 5. Desde allí verás el listado de carpetas. Haz clic en `Respuesta_Claude_Opus_4.6` o `Respuesta_Gemini_3.1_Pro_High` para visualizar sus páginas.
 
----
 
-### Opción 3: Usar Node.js (http-server)
-Ideal si estás en el ecosistema de JavaScript y cuentas con npm/npx instalado.
-
-1. Abre tu terminal en la carpeta raíz del proyecto.
-2. Levanta el servidor ejecutando:
-   ```bash
-   npx http-server ./ -p 3000
-   ```
-3. Abre tu navegador en [http://localhost:3000](http://localhost:3000) y selecciona la carpeta de la versión que quieras testear.
-
-## ♿ Notas de Accesibilidad (Gemini 3.1 Pro High)
-La versión dentro de la carpeta `Respuesta_Gemini_3.1_Pro_High` ha sido especialmente acondicionada para cumplir con normativas de accesibilidad:
-- Navegación completa por teclado (puedes usar `TAB`, `Shift + TAB` para moverte, y `Enter` o `Espacio` para desplegar las pestañas de imágenes).
-- Enlace "Skip to content" oculto, visible al recibir el foco del teclado.
-- Semántica HTML mejorada con ARIA roles.
