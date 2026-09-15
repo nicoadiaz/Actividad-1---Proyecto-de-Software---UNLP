@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Dibujos - Nicolás Díaz</title>
+    <link rel="stylesheet" href="estilosIA.css">
+</head>
+
+<body>
+    <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
+    <header role="banner">
+        <h1>Portafolio de Dibujos</h1>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#mantenedor">Información del Mantenedor</a></li>
+                <li><a href="#catalogo">Catálogo de Dibujos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido-principal" role="main">
+        <section id="contacto" aria-labelledby="titulo-contacto">
+            <h2 id="titulo-contacto">1. Formulario de Contacto</h2>
+            <p>Puedes escribirme directamente a <a href="mailto:nicodiaz421@gmail.com"
+                    class="enlace-email">nicodiaz421@gmail.com</a> o utilizar el siguiente formulario:</p>
+            <form action="#" method="POST" class="formulario">
+                <fieldset>
+                    <legend class="sr-only">Detalles de contacto</legend>
+                    <div class="grupo-form">
+                        <label for="nombre">Nombre completo:</label>
+                        <input type="text" id="nombre" name="nombre" required aria-required="true" autocomplete="name">
+                    </div>
+                    <div class="grupo-form">
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" required aria-required="true" autocomplete="email">
+                    </div>
+                    <div class="grupo-form">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" required aria-required="true"></textarea>
+                    </div>
+                    <button type="submit">Enviar mensaje</button>
+                </fieldset>
+            </form>
+        </section>
+
+        <section id="mantenedor" aria-labelledby="titulo-mantenedor">
+            <h2 id="titulo-mantenedor">2. Información del Mantenedor</h2>
+            <div class="tarjeta-info">
+                <p><strong>Nombre del mantenedor:</strong> Nicolás Díaz</p>
+                <p><strong>Ocupación:</strong> Estudiante de Lic. en Sistemas en la UNLP</p>
+                <p><strong>Descripción:</strong> Estudiante apasionado por la Ingeniería de software y el desarrollo de
+                    páginas web. Buscando mi primera experiencia laboral en el rubro.</p>
+                <p><strong>Email de contacto:</strong> nicodiaz421@gmail.com</p>
+            </div>
+        </section>
+
+        <section id="catalogo" aria-labelledby="titulo-catalogo">
+            <h2 id="titulo-catalogo">3. Catálogo de Dibujos</h2>
+
+            <div class="galeria-contenedora">
+                <!-- Radio Button Hack (Ocultos pero accesibles por teclado) -->
+                <input type="radio" id="cat-caricaturas" name="categorias" class="sr-only" checked>
+                <input type="radio" id="cat-paisajes" name="categorias" class="sr-only">
+                <input type="radio" id="cat-anime" name="categorias" class="sr-only">
+
+                <!-- Etiquetas que fungen como botones -->
+                <div class="controles-galeria" role="tablist" aria-label="Categorías de dibujos">
+                    <label for="cat-caricaturas" role="tab" tabindex="0">Caricaturas</label>
+                    <label for="cat-paisajes" role="tab" tabindex="0">Paisajes</label>
+                    <label for="cat-anime" role="tab" tabindex="0">Animé</label>
+                </div>
+
+                <!-- Contenedores de imágenes -->
+                <div class="paneles-galeria">
+                    <div class="panel" id="panel-caricaturas" role="tabpanel">
+                        <img src="../imagenes/caricatura1.png"
+                            alt="Dibujo de caricatura a color de un personaje sonriendo" tabindex="0">
+                        <img src="../imagenes/caricatura2.png"
+                            alt="Dibujo de caricatura en blanco y negro de un animal antropomórfico" tabindex="0">
+                    </div>
+
+                    <div class="panel" id="panel-paisajes" role="tabpanel">
+                        <img src="../imagenes/paisaje1.png"
+                            alt="Dibujo de un paisaje montañoso al atardecer con colores cálidos" tabindex="0">
+                        <img src="../imagenes/paisaje2.png" alt="Dibujo de un bosque frondoso cruzado por un río" tabindex="0">
+                    </div>
+
+                    <div class="panel" id="panel-anime" role="tabpanel">
+                        <img src="../imagenes/anime1.png" alt="Dibujo estilo animé de un guerrero con espada" tabindex="0">
+                        <img src="../imagenes/anime2.png"
+                            alt="Dibujo estilo animé de un personaje femenino usando magia" tabindex="0">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2026 Nicolás Díaz. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Habilitar selección de pestañas (radio buttons) con la tecla Enter o Espacio
+        document.querySelectorAll('.controles-galeria label').forEach(label => {
+            label.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault(); // Evitar scroll con espacio
+                    const targetId = this.getAttribute('for');
+                    document.getElementById(targetId).checked = true;
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
