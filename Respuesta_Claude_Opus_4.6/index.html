@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Galería de dibujos digitales de Nicolás Díaz. Explora caricaturas, paisajes y animé en una colección curada de arte original.">
+  <meta name="author" content="Nicolás Díaz">
+  <title>Galería de Dibujos | Nicolás Díaz</title>
+  <link rel="stylesheet" href="estilosIA.css">
+</head>
+
+<body>
+
+  <!-- Enlace de accesibilidad: saltar al contenido -->
+  <a href="#sec-catalogo" class="skip-link">Saltar al contenido principal</a>
+
+  <!-- ==========================================
+       TARGETS PARA NAVEGACIÓN PRINCIPAL
+       Permite navegación 100% nativa con Enter y Tab
+       (Técnica CSS :target)
+       ========================================== -->
+  <span id="nav-catalogo" class="sr-only"></span>
+  <span id="nav-mantenedor" class="sr-only"></span>
+  <span id="nav-contacto" class="sr-only"></span>
+
+  <!-- ==========================================
+       HEADER
+       ========================================== -->
+  <header>
+    <div class="header-content">
+      <h1>Galería de Dibujos</h1>
+      <p class="header-subtitle">Colección curada de arte digital original</p>
+    </div>
+
+    <nav aria-label="Navegación principal">
+      <a href="#nav-catalogo" class="nav-tab" id="tab-catalogo">
+        <span class="nav-icon" aria-hidden="true">&#x1f5bc;</span> Catálogo
+      </a>
+      <a href="#nav-mantenedor" class="nav-tab" id="tab-mantenedor">
+        <span class="nav-icon" aria-hidden="true">&#x1f464;</span> Sobre&nbsp;Mí
+      </a>
+      <a href="#nav-contacto" class="nav-tab" id="tab-contacto">
+        <span class="nav-icon" aria-hidden="true">&#x2709;</span> Contacto
+      </a>
+    </nav>
+  </header>
+
+  <!-- ==========================================
+       CONTENIDO PRINCIPAL
+       ========================================== -->
+  <main id="contenido-principal">
+
+    <!-- ====== SECCIÓN: CATÁLOGO ====== -->
+    <section id="sec-catalogo" class="seccion" aria-label="Catálogo de dibujos">
+      <div class="seccion-inner">
+        <h2>Catálogo de Dibujos</h2>
+        <p class="seccion-desc">Explorá mi colección de ilustraciones organizadas por categoría. Seleccioná una pestaña
+          para descubrir cada estilo.</p>
+
+        <!-- Targets para Categorías (CSS :target hack) -->
+        <span id="cat-caricaturas" class="sr-only"></span>
+        <span id="cat-paisajes" class="sr-only"></span>
+        <span id="cat-anime" class="sr-only"></span>
+
+        <nav class="cat-tabs" aria-label="Categorías del catálogo">
+          <a href="#cat-caricaturas" class="cat-tab" id="tab-caricaturas">Caricaturas</a>
+          <a href="#cat-paisajes" class="cat-tab" id="tab-paisajes">Paisajes</a>
+          <a href="#cat-anime" class="cat-tab" id="tab-anime">Animé</a>
+        </nav>
+
+        <!-- Galería: Caricaturas -->
+        <div id="gal-caricaturas" class="galeria" aria-label="Galería de caricaturas">
+          <figure class="artwork-card">
+            <img src="../imagenes/caricatura1.png"
+              alt="Caricatura colorida de un personaje con rasgos exagerados y expresión divertida">
+            <figcaption>Caricatura N°1</figcaption>
+          </figure>
+          <figure class="artwork-card">
+            <img src="../imagenes/caricatura2.png"
+              alt="Caricatura estilizada de un personaje en pose dinámica con fondo vibrante">
+            <figcaption>Caricatura N°2</figcaption>
+          </figure>
+        </div>
+
+        <!-- Galería: Paisajes -->
+        <div id="gal-paisajes" class="galeria" aria-label="Galería de paisajes">
+          <figure class="artwork-card">
+            <img src="../imagenes/paisaje1.png"
+              alt="Paisaje natural con montañas nevadas reflejadas en un lago al atardecer">
+            <figcaption>Paisaje N°1</figcaption>
+          </figure>
+          <figure class="artwork-card">
+            <img src="../imagenes/paisaje2.png"
+              alt="Paisaje costero con olas rompiendo en la orilla bajo un cielo estrellado">
+            <figcaption>Paisaje N°2</figcaption>
+          </figure>
+        </div>
+
+        <!-- Galería: Animé -->
+        <div id="gal-anime" class="galeria" aria-label="Galería de animé">
+          <figure class="artwork-card">
+            <img src="../imagenes/anime1.png"
+              alt="Ilustración de personaje de animé con grandes ojos expresivos y cabello colorido">
+            <figcaption>Animé N°1</figcaption>
+          </figure>
+          <figure class="artwork-card">
+            <img src="../imagenes/anime2.png"
+              alt="Dibujo de personaje de animé en escena de acción con efectos de energía">
+            <figcaption>Animé N°2</figcaption>
+          </figure>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====== SECCIÓN: SOBRE MÍ ====== -->
+    <section id="sec-mantenedor" class="seccion" aria-label="Información del mantenedor">
+      <div class="seccion-inner">
+        <article class="about-card">
+          <div class="about-avatar" aria-hidden="true">ND</div>
+          <h2>Nicolás Díaz</h2>
+          <p class="about-role">Estudiante de Lic. en Sistemas en la UNLP</p>
+          <hr class="about-divider" aria-hidden="true">
+          <p class="about-desc">Estudiante apasionado por la Ingeniería de software y el desarrollo de páginas web.
+            Buscando mi primera experiencia laboral en el rubro.</p>
+          <address aria-label="Correo electrónico de contacto">
+            <span class="contact-icon" aria-hidden="true">&#x2709;</span>
+            <a href="mailto:nicodiaz421@gmail.com">nicodiaz421@gmail.com</a>
+          </address>
+        </article>
+      </div>
+    </section>
+
+    <!-- ====== SECCIÓN: CONTACTO ====== -->
+    <section id="sec-contacto" class="seccion" aria-label="Formulario de contacto">
+      <div class="seccion-inner">
+        <h2>Contacto</h2>
+        <p class="seccion-desc">¿Tenés alguna consulta o querés encargar un dibujo personalizado? Completá el formulario
+          y te respondo a la brevedad.</p>
+
+        <form action="mailto:nicodiaz421@gmail.com" method="POST" enctype="text/plain" class="contact-form"
+          aria-label="Formulario de contacto">
+          <div class="form-group">
+            <label for="nombre">Nombre completo <span class="required" aria-hidden="true">*</span></label>
+            <input type="text" id="nombre" name="nombre" required aria-required="true" placeholder="Tu nombre completo"
+              autocomplete="name">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Correo electrónico <span class="required" aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" required aria-required="true" placeholder="tu@email.com"
+              autocomplete="email">
+          </div>
+
+          <div class="form-group">
+            <label for="asunto">Asunto <span class="required" aria-hidden="true">*</span></label>
+            <input type="text" id="asunto" name="asunto" required aria-required="true"
+              placeholder="Motivo de tu consulta">
+          </div>
+
+          <div class="form-group">
+            <label for="mensaje">Mensaje <span class="required" aria-hidden="true">*</span></label>
+            <textarea id="mensaje" name="mensaje" rows="6" required aria-required="true"
+              placeholder="Escribí tu mensaje aquí..."></textarea>
+          </div>
+
+          <button type="submit" aria-label="Enviar formulario de contacto">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer role="contentinfo">
+    <p>&copy; 2026 Nicolás Díaz &mdash; Galería de Dibujos. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+
+</html>
